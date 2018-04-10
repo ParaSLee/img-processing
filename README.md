@@ -1,7 +1,7 @@
 # imag-processing
 ## demo
 
-[点击查看demo](https://github.com/ParaSLee/img-processing/blob/master/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%A6%96%E9%A1%B5.html)
+[点击查看demo](https://paraslee.github.io/img-processing/图像处理-首页.html)
 
 
 
