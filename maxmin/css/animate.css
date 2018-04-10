@@ -1,0 +1,12 @@
+.imgBox{
+	transition: transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	-webkit-transition: -webkit-transform 0.5s;
+	-o-transition:-o-transform 0.5s;
+}
+.imgBox img{
+	transition: transform,width,height 0.5s;
+	-moz-transition: -moz-transform,width,height 0.5s;
+	-webkit-transition: -webkit-transform,width,height 0.5s;
+	-o-transition:-o-transform,width,height 0.5s;
+}

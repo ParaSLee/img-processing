@@ -1,0 +1,122 @@
+.nav::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.header{
+	background-color: #ccc;
+}
+/*导航栏样式*/
+.nav ul{
+	list-style: none;
+	padding: 0;
+	margin:0;
+	background-color: #333;
+}
+.nav ul:before,
+.nav ul:after {
+  content: "";
+  display: table;
+}
+.nav ul:after {
+  clear: both;
+}
+.nav ul>li{
+	float: left;
+	position: relative;
+}
+.nav a{
+	/*width: 110px;*/
+	color: white;
+	text-align: center;
+	display: block;
+	line-height: 2.5em;
+	border-left:1px solid #595959;
+	text-decoration: none;
+	padding: 0 15px;
+}
+.nav a:hover{
+	background-color: #595959;
+}
+.nav ul li ul{
+	float: none;
+	position: absolute;
+}
+.nav ul li ul li{
+	width: 150px;
+}
+.nav ul li ul li a{
+	border: none;
+}
+.nav ul li ul li a:hover{
+	  background: rgba(0, 0, 0, 0.2);
+}
+.nav ul li ul{
+	/*display: none;*/
+	 background: #273754;
+}
+.nav ul li:hover ul{
+	/*display: block;*/
+}
+
+
+.nav ul > li:hover ul {
+  max-height: 1000px;
+  -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0);
+}
+.nav li ul {
+  position: absolute;
+  left: 0;
+  /*top: 36px;*/
+
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
+  -webkit-transform-origin: 50% 0;
+  -webkit-transition: 350ms;
+  -moz-transition: 350ms;
+  -o-transition: 350ms;
+  transition: 350ms;
+}
+/*main和读取图片、按钮*/
+.main-box{
+	min-height: 900px;
+	margin-top: 50px;
+}
+/*.main{
+	border:2px solid blue;
+	height: 800px;	
+}
+.main img{
+	width: 100%;
+	height: 100%;
+}
+
+.but{
+	margin-top: 10px;
+}
+.but .sele{
+	float: right;
+	width: 100px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	text-align: center;
+	background-color: yellow;
+	border: 2px solid red;
+	border-radius: 30px;
+	outline: 0;
+}
+.but.get{
+	float:left;
+
+}
+*/
+
+/*head文字样式*/
+.body-box h2{
+	text-align: center;
+    margin: 0;
+    font-size: 2em;
+}

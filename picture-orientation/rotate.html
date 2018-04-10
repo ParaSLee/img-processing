@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>旋转</title>
+		<link href="./css/app.css" rel="stylesheet" >
+		<link href="./css/animate.css" rel="stylesheet" >
+
+		<!-- inputArea -->
+		<link rel="stylesheet" type="text/css" href="./modules/inputArea/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="./modules/inputArea/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="./modules/inputArea/css/default.css">
+		<link rel="stylesheet" type="text/css" href="./modules/inputArea/css/set2.css" />
+
+	</head>
+	<body>
+		<!-- 添加图片的区域 -->
+		<div id="J-preview" class="previewBox">
+			<label for="updata">
+				<div class="addIframe">
+					<img src="./img/add.png" class="addicon">
+					<p>点击上传图片</p>
+				</div>
+			</label>
+			
+			<input id="updata" type="file" onchange="preview(this)" style="display: none;" accept="image/png, image/jpeg"/>
+		</div>
+
+		<!-- 显示图片的区域 -->
+		<div id="J-showPic" class="hidden">
+			<div class="photoIframe">
+				<div class="imgBox">
+					<img class="J-showImg">
+				</div>
+			</div>
+		</div>
+
+		<label for="updata" style="display: inline;">
+			<div id="J-updataBtn" class="changePhoto hidden">
+				<span class="updataicon"></span>
+				<span>更改图片</span>
+			</div>
+		</label>
+
+		<div class="hidden J-functionArea">
+			<span class="input input--nariko wiseInput">
+				<input class="input__field input__field--nariko" type="text" id="inputEdg" />
+				<label class="input__label input__label--nariko" for="input-20">
+					<span class="input__label-content input__label-content--nariko">请输入旋转角度</span>
+				</label>
+			</span>
+			<div class="changePhoto" onclick="wiseClick('addEdg')">
+				<span>增加旋转度数</span>
+			</div>
+		</div>
+
+		
+
+		
+		<script src="./js/index.js"></script>
+		<script src="./js/photochange.js"></script>
+		<!-- inputArea -->
+		<script src="./modules/inputArea/js/classie.js"></script>
+		<script>
+		    (function () {
+		        if (!String.prototype.trim) {
+		            (function () {
+		                // Make sure we trim BOM and NBSP
+		                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+		                String.prototype.trim = function () {
+		                    return this.replace(rtrim, '');
+		                };
+		            })();
+		        }
+
+		        [ ].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+		            // in case the input is already filled..
+		            if (inputEl.value.trim() !== '') {
+		                classie.add(inputEl.parentNode, 'input--filled');
+		            }
+
+		            // events:
+		            inputEl.addEventListener('focus', onInputFocus);
+		            inputEl.addEventListener('blur', onInputBlur);
+		        });
+
+		        function onInputFocus(ev) {
+		            classie.add(ev.target.parentNode, 'input--filled');
+		        }
+
+		        function onInputBlur(ev) {
+		            if (ev.target.value.trim() === '') {
+		                classie.remove(ev.target.parentNode, 'input--filled');
+		            }
+		        }
+		    })();
+		</script>
+	</body>
+</html>

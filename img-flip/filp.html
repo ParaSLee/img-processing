@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>水平、锤子翻转</title>
+		<link href="./css/app.css" rel="stylesheet" >
+		<link href="./css/animate.css" rel="stylesheet" >
+	</head>
+	<body>
+		<!-- 添加图片的区域 -->
+		<div id="J-preview" class="previewBox">
+			<label for="updata">
+				<div class="addIframe">
+					<img src="./img/add.png" class="addicon">
+					<p>点击上传图片</p>
+				</div>
+			</label>
+			
+			<input id="updata" type="file" onchange="preview(this)" style="display: none;" accept="image/png, image/jpeg"/>
+		</div>
+
+		<!-- 显示图片的区域 -->
+		<div id="J-showPic" class="hidden">
+			<div class="photoIframe">
+				<div class="imgBox">
+					<img class="J-showImg">
+				</div>
+			</div>
+		</div>
+
+		<label for="updata" style="display: inline;">
+			<div id="J-updataBtn" class="changePhoto hidden">
+				<span class="updataicon"></span>
+				<span>更改图片</span>
+			</div>
+		</label>
+
+		<div class="hidden J-functionArea">
+			<div class="changePhoto" onclick="level()">
+				<span>水平翻转</span>
+			</div>
+			<div class="changePhoto" onclick="vertical()">
+				<span>垂直翻转</span>
+			</div>
+		</div>
+		
+		<script src="./js/index.js"></script>
+		<script src="./js/photochange.js"></script>
+	</body>
+</html>

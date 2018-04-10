@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>彩色铅笔画处理</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+
+		<link href="./colored-pencil/css/app.css" rel="stylesheet" >
+        <link href="./colored-pencil/css/animate.css" rel="stylesheet" >
+
+		
+		<script type="text/javascript" src="main.js"></script>
+		<style type="text/css">
+		body{
+			background-color: #ccc;
+			margin-bottom: 50px;
+			color: #404d5b;
+    		font-weight: 500;
+    		font-size: 1.05em;
+    		font-family: 'Raleway', Arial, sans-serif;
+		}
+		.body-box{
+			width: 1000px;
+			margin: 0 auto;
+			background-color: #f5f6f7;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="body-box">
+			<h2>彩色铅笔画处理</h2>
+			<div class="header nav">
+				<ul>
+					<li>
+						<a href="#">Image operation</a>
+						<ul>
+							<li><a href="./图像旋转.html">正逆向旋转</a></li>
+							<!-- <li><a href="">逆向旋转</a></li> -->
+							<li><a href="./镜像翻转.html">镜面翻转</a></li>
+							<!-- <li><a href="">左右镜面旋转</a></li> -->
+						</ul>
+					</li>
+					<li>
+						<a href="#">预处理</a>
+						<ul>
+							<li><a href="./三色处理.html">红绿蓝</a></li>
+							<li><a href="./灰度处理.html">灰度变换</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Max.Min</a>
+						<ul>
+							<li><a href="./放大缩小.html">图像放大(Max)</a></li>
+							<li><a href="./放大缩小.html">图像缩小(Min)</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="./边缘处理.html">Sober边缘检测</a>
+						<!-- <ul>
+							<li><a href="">7</a></li>
+							<li><a href="">7</a></li>
+						</ul> -->
+					</li>
+					<li>
+						<a href="./彩色铅笔画.html">Colored Pencil</a>
+						<!-- <ul>
+							<li><a href="">傅里叶变换</a></li>
+							<li><a href="">5</a></li>
+						</ul> -->
+					</li>
+						
+					<li>
+						<a href="./铅笔画.html">Pencil Drawing</a>
+						<!-- <ul>
+							<li><a href="">逆傅里叶变换</a></li>
+							<li><a href="">6</a></li>
+						</ul> -->
+					</li>
+						
+					<li>
+						<a href="./浮雕处理.html">Relief Treatment</a>
+						<!-- <ul>
+							<li><a href="">原图线性变换</a></li>
+							<li><a href="">3</a></li>
+						</ul> -->
+					</li>
+					
+				</ul>
+			</div>
+			<div class="main-box">
+				<canvas id="canvasA" width="500" height="199.3" style="display: none;"></canvas>
+		        <!-- 添加图片的区域 -->
+		        <div id="J-preview" class="previewBox">
+		            <label for="updata">
+		                <div class="addIframe">
+		                    <img src="./colored-pencil/img/add.png" class="addicon">
+		                    <p>点击上传图片</p>
+		                </div>
+		            </label>
+		            
+		            <input id="updata" type="file" onchange="preview(this)" style="display: none;" accept="image/png, image/jpeg"/>
+		        </div>
+
+		        <!-- 显示图片的区域 -->
+		        <div id="J-showPic" class="hidden">
+		            <div class="photoIframe">
+		                <div class="imgBox">
+		                    <img class="J-showImg hiddenShow">
+		                    <div id="J-bg" class="no-pencil-effect"></div>
+		                    <canvas id="canvasB" class="canvasHidden"></canvas>
+		                </div>
+		            </div>
+		        </div>
+		        
+		        <label for="updata" style="display: inline;">
+		            <div id="J-updataBtn" class="changePhoto hidden">
+		                <span class="updataicon"></span>
+		                <span>更改图片</span>
+		            </div>
+		        </label>
+
+		        <div class="hidden J-functionArea">
+		            <div class="changePhoto" onclick="red()">
+		                <span>彩色铅笔画</span>
+		            </div>
+		            <div class="changePhoto" onclick="reback()">
+		                <span>还原</span>
+		            </div>
+		        </div>
+		        
+		        <script src="./colored-pencil/modules/jquery.min.js"></script>
+		        <script src="./colored-pencil/js/index.js"></script>
+		        <script src="./colored-pencil/js/photochange.js"></script>
+
+		
+
+		
+		
+			</div>
+		</div>
+	</body>
+</html>
