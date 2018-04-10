@@ -1,4 +1,10 @@
 # imag-processing
+## demo
+
+[点击查看demo](https://github.com/ParaSLee/img-processing/blob/master/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%A6%96%E9%A1%B5.html)
+
+
+
 ## 技术栈
 
 基于 Canvas / css3 / JQ 的纯前端图像处理 
